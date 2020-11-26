@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2019 Google Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/tea_destination">
+
+    <fragment
+        android:id="@+id/tea_destination"
+        android:name="com.example.android.teacosy.screens.shop.ShopFragment"
+        android:label="game_fragment"
+        tools:layout="@layout/tea_fragment">
+        <action
+            android:id="@+id/action_tea_to_cart"
+            app:destination="@id/total_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/total_destination"
+        android:name="com.example.android.teacosy.screens.total.TotalFragment"
+        android:label="score_fragment"
+        tools:layout="@layout/total_fragment">
+        <argument
+            android:name="total"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="fee"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_total_destination_to_tea_destination2"
+            app:destination="@id/tea_destination" />
+    </fragment>
+</navigation>
