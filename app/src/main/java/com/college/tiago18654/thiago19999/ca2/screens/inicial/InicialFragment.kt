@@ -46,6 +46,7 @@ class InicialFragment : Fragment() {
     private fun menuCall(type : String) {
         // text test for navigation
         //Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
+        Log.i("InicialFragment", "menucall")
         val action = InicialFragmentDirections.actionInicialToTea();
 
         NavHostFragment.findNavController(this).navigate(action)

@@ -58,7 +58,7 @@
             app:argType="float" />
         <action
             android:id="@+id/action_total_destination_to_tea_destination2"
-            app:destination="@id/tea_destination" />
+            app:destination="@id/inicial_screen" />
     </fragment>
 
 </navigation>
