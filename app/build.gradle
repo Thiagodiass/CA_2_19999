@@ -23,7 +23,7 @@ apply plugin: "androidx.navigation.safeargs"
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.example.android.teacosy"
+        applicationId "com.college.tiago18654.thiago19999.ca2"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1

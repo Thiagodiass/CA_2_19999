@@ -15,7 +15,7 @@
   -->
 
 <resources>
-    <string name="app_name">Tea Cosy</string>
+    <!--string name="app_name">Tea Cosy</string-->
     <string name="shop_again">Shop Again</string>
     <string name="this_is_your_cart">This is your cart</string>
     <string name="add_to_the_cart">Go to the cart</string>
@@ -29,7 +29,7 @@
     <string name="irish_breakfast">Irish Breakfast : 2.5 per 100 gram bag</string>
 
     <string name="teas">"\Total of teas:                   €"</string>
-    <string name="delivery">"\Delivery fees:                   €" </string>
+    <!--string name="delivery">"\Delivery fees:                   €" </string-->
     <string name="total">"\TOTAL:                  €"</string>
     <string name="choose_your_tea">Choose your tea selecting the quantity on the ComboBox... </string>
 
@@ -45,4 +45,12 @@
         <item>8</item>
         <item>9</item>
     </string-array>
+
+
+    <!--new application -->
+    <string name="app_name">M Fusion Sandford</string>
+    <string name="welcome">Welcome to the M Fusion \n We are happy to have you as a customer. \n
+    Enjoy your experience. \n M Fugion Sandford</string>
+    <string name="delivery">Delivery</string>
+    <string name="collection">Collection</string>
 </resources>

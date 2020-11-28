@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.teacosy
+package com.college.tiago18654.thiago19999.ca2
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        setContentView(R.layout.inicial_fragment)
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.android.teacosy.screens.shop
+package com.college.tiago18654.thiago19999.ca2.screens.shop
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

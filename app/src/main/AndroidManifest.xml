@@ -16,7 +16,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.android.teacosy">
+    package="com.college.tiago18654.thiago19999.ca2">
 
     <application
         android:allowBackup="true"
@@ -30,7 +30,7 @@
         <!-- Screen locked to landscape for easier play -->
         <!-- configChanges attribute makes the following actions NOT cause a config change  -->
         <!-- screenOrientation attribute sets the default animation-->
-        <activity android:name="com.example.android.teacosy.MainActivity">
+        <activity android:name="com.college.tiago18654.thiago19999.ca2.MainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

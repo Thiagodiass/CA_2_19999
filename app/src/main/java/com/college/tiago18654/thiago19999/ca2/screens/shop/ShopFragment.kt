@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.teacosy.screens.shop
+package com.college.tiago18654.thiago19999.ca2.screens.shop
 
 import android.os.Bundle
 import android.util.Log
@@ -22,17 +22,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ArrayAdapter.createFromResource
-import android.widget.ListView
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
-import com.example.android.teacosy.R
-import com.example.android.teacosy.databinding.TeaFragmentBinding
-import kotlinx.android.synthetic.main.tea_fragment.*
+import com.college.tiago18654.thiago19999.ca2.R
+import com.college.tiago18654.thiago19999.ca2.databinding.TeaFragmentBinding
 
 /**
  * @author Tiago Rufino

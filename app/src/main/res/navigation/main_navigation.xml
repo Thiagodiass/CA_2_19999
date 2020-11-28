@@ -17,11 +17,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/tea_destination">
+    app:startDestination="@id/inicial_screen">
 
     <fragment
+        android:id="@+id/inicial_screen"
+        android:name="com.college.tiago18654.thiago19999.ca2.screens.inicial.InicialFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/inicial_fragment">
+        <action
+        android:id="@+id/action_inicial_to_tea"
+        app:destination="@id/tea_destination" />
+    </fragment>
+    <fragment
         android:id="@+id/tea_destination"
-        android:name="com.example.android.teacosy.screens.shop.ShopFragment"
+        android:name="com.college.tiago18654.thiago19999.ca2.screens.shop.ShopFragment"
         android:label="game_fragment"
         tools:layout="@layout/tea_fragment">
         <action
@@ -36,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/total_destination"
-        android:name="com.example.android.teacosy.screens.total.TotalFragment"
+        android:name="com.college.tiago18654.thiago19999.ca2.screens.total.TotalFragment"
         android:label="score_fragment"
         tools:layout="@layout/total_fragment">
         <argument
@@ -51,4 +60,5 @@
             android:id="@+id/action_total_destination_to_tea_destination2"
             app:destination="@id/tea_destination" />
     </fragment>
+
 </navigation>

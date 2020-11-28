@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.teacosy.screens.total
+package com.college.tiago18654.thiago19999.ca2.screens.total
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,8 +24,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
-import com.example.android.teacosy.R
-import com.example.android.teacosy.databinding.TotalFragmentBinding
+import com.college.tiago18654.thiago19999.ca2.R
+import com.college.tiago18654.thiago19999.ca2.databinding.TotalFragmentBinding
 import kotlin.system.exitProcess
 
 /**
