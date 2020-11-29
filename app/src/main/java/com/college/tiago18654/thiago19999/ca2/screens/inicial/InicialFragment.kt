@@ -5,15 +5,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.view.animation.AlphaAnimation
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.college.tiago18654.thiago19999.ca2.R
 import com.college.tiago18654.thiago19999.ca2.databinding.InicialFragmentBinding
 import com.college.tiago18654.thiago19999.ca2.screens.shop.ShopCartModel
-import kotlinx.android.synthetic.main.inicial_fragment.view.*
+
 
 class InicialFragment : Fragment() {
 
@@ -43,7 +42,7 @@ class InicialFragment : Fragment() {
      * @author Tiago Rufino
      * Call the menu screen
      */
-    private fun menuCall(type : String) {
+    private fun menuCall(type: String) {
         // text test for navigation
         //Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
         Log.i("InicialFragment", "menucall")

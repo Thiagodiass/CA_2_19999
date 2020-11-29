@@ -6,7 +6,8 @@
         android:id="@+id/inicial_screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#2B2B2B"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
         tools:context=".screens.inicial.InicialFragment">
 
         <ImageButton
@@ -14,28 +15,33 @@
             android:layout_width="165dp"
             android:layout_height="135dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="200dp"
             android:scaleType="fitXY"
             android:src="@drawable/delivery"
-            android:theme="@style/GoButton"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/transparent_bg_bordered_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.144"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.397"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/collect_button"
             android:layout_width="165dp"
             android:layout_height="135dp"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="200dp"
             android:scaleType="fitXY"
-            android:src="@drawable/Collection"
-            android:theme="@style/GoButton"
+            android:src="@drawable/collection"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/transparent_bg_bordered_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.859"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.858"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.397" />
 
         <ImageButton
             android:id="@+id/menu_button"
@@ -43,12 +49,14 @@
             android:layout_height="55dp"
             android:layout_marginBottom="38dp"
             android:scaleType="fitXY"
-            android:src="@drawable/Menu"
-            android:theme="@style/GoButton"
+            android:src="@drawable/menu"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/transparent_bg_bordered_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/see_menu"
@@ -69,22 +77,22 @@
             android:id="@+id/chooseoption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="76dp"
             android:text="@string/chooseoption"
             android:textColor="#F8F4F4"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/delivery_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="70dp"
-            app:layout_constraintBottom_toTopOf="@+id/delivery_button"
+            android:layout_width="86dp"
+            android:layout_height="114dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logofusion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

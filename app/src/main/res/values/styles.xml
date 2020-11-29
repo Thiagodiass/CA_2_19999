@@ -25,12 +25,8 @@
     </style>
 
     <!-- Button Styles -->
-    <style name="GoButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="colorButtonNormal">@color/colorPrimary</item>
-        <item name="colorControlHighlight">@color/select_grey</item>
-        <item name="android:textColor">@color/white_text_color</item>
-        <item name="colorAccent">@color/select_grey</item>
+    <style name="DeliveryCollectionButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorAccent">@color/black_text_color</item>
     </style>
-
 
 </resources>

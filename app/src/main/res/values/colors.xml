@@ -18,8 +18,9 @@
     <color name="colorPrimary">#434E5D</color>
     <color name="colorPrimaryDark">#363F4C</color>
     <color name="colorAccent">#D81B1B</color>
-    <color name="select_grey">#5A6778</color>
+    <color name="select_grey">#4A5667</color>
     <color name="white_text_color">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 
 
     <color name="ok_green_color">#6ab343</color>
