@@ -29,18 +29,30 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="tea_destination">
+                  <entry key="menu_destination">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-464" />
-                            <option name="y" value="102" />
+                            <option name="x" value="-488" />
+                            <option name="y" value="72" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="sub_menu_destination">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_tea_to_cart">
+                            <entry key="action_sub_menu_to_cart">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -55,13 +67,13 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="62" />
-                            <option name="y" value="174" />
+                            <option name="x" value="-118" />
+                            <option name="y" value="178" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_total_destination_to_tea_destination2">
+                            <entry key="action_cart_tp_initial">
                               <value>
                                 <LayoutPositions />
                               </value>

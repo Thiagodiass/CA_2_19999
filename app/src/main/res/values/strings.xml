@@ -15,44 +15,52 @@
   -->
 
 <resources>
-    <!--string name="app_name">Tea Cosy</string-->
     <string name="shop_again">Shop Again</string>
     <string name="this_is_your_cart">This is your cart</string>
     <string name="add_to_the_cart">Go to the cart</string>
     <string name="exit">Exit</string>
     <string name="the_item_is">The item is…</string>
-    <string name="chooseoption">Start your order here:</string>
-    <string name="darjelling">Darjelling : 8.50 per 100 gram bag</string>
-    <string name="assam">Assam : 7.50 per 100 gram bag</string>
-    <string name="lapsang">Lapsang : Sous 9.5 per 100 gram bag</string>
-    <string name="earl_grey">Earl Grey:  3.5 per 100 gram bag</string>
-    <string name="irish_breakfast">Irish Breakfast : 2.5 per 100 gram bag</string>
+
 
     <string name="teas">"\Total of teas:                   €"</string>
     <!--string name="delivery">"\Delivery fees:                   €" </string-->
     <string name="total">"\TOTAL:                  €"</string>
-    <string name="choose_your_tea">Choose your tea selecting the quantity on the ComboBox... </string>
 
-    <string-array name="quantity">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-    </string-array>
 
 
     <!--new application -->
     <string name="app_name">M Fusion Sandford</string>
-    <string name="welcome">Welcome to the M Fusion \n We are happy to have you as a customer. \n
-    Enjoy your experience. \n M Fugion Sandford</string>
+    <string name="choose_option">Start your order here:</string>
     <string name="delivery">Delivery</string>
     <string name="collection">Collection</string>
     <string name="see_menu">See menu</string>
     <string name="start_your_order">Start your order here:</string>
+    <string name="todo">TODO</string>
+    <string name="delivery_from">Delivery from €2.00</string>
+
+
+
+​<string-array name="Foods">
+    ​<item name="food">Meal Deal 1 \n \n \n 3 in 1, spicy chicken wings &amp; a can of soft drink</item>
+    ​<item name="food">Meal Deal 3 (3 + 1 &amp; S Roll) \n \n \n  3 in 1, two spring rolls &amp; can of soft drink</item>
+    ​<item name="food">Meal Deal 4 (3+1 &amp; 4Balls) \n \n \n 3 in 1, four chicken balls &amp; a can of soft drink</item>
+    ​<item name="food">Meal Deal 5(chicken cy &amp; chips) \n \n \n Chicken, cury &amp; chips in one tray &amp; a can of soft drink</item>
+    ​<item name="food">Meal Deal 6(3+1 &amp; 6 nuggets) \n \n \n 3 n 1, six chicken nuggets &amp; a can of soft drink</item>
+​</string-array>
+
+    <!-- Popup window details -->
+    <string name="name_food__text">Meal Deal 1 \n (3+1&amp;spicy wings)</string>
+    <string name="valor_text">€6.00</string>
+    <string name="descrition_text">3 in 1, 4 spicy checkin wings &amp; a can of soft drink.</string>
+    <string name="select_option_text">Select Option</string>
+    <string name="select_drink_text">Select Drink (0.33L)</string>
+    <string name="prawns_check_box">Prawn Crackers (+ €1.00)</string>
+    <string name="cocacola_checkbox">Coca-Cola___________€0.00</string>
+    <string name="dietcocacola_checkbox">Diet Coca-Cola_______€0.00</string>
+    <string name="sprite_checkbox">Sprite_______________€0.00</string>
+    <string name="sevenup_checkbox">7-UP________________€0.00</string>
+    <string name="cluborange_checkbox">Club Orange_________€0.00</string>
+    <string name="nodrink_checkbox">No Drink</string>
+    <string name="add_to_tbe_basket_button">Add to the basket</string>
+
 </resources>

@@ -26,15 +26,15 @@
         tools:layout="@layout/inicial_fragment">
         <action
         android:id="@+id/action_inicial_to_tea"
-        app:destination="@id/tea_destination" />
+        app:destination="@id/menu_destination" />
     </fragment>
     <fragment
-        android:id="@+id/tea_destination"
-        android:name="com.college.tiago18654.thiago19999.ca2.screens.shop.ShopFragment"
-        android:label="game_fragment"
-        tools:layout="@layout/tea_fragment">
+        android:id="@+id/menu_destination"
+        android:name="com.college.tiago18654.thiago19999.ca2.screens.menu.MenuFragment"
+        android:label="menu_fragment"
+        tools:layout="@layout/menu_fragment">
         <action
-            android:id="@+id/action_tea_to_cart"
+            android:id="@+id/action_menu_to_cart"
             app:destination="@id/total_destination"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -57,7 +57,7 @@
             android:defaultValue="0.0"
             app:argType="float" />
         <action
-            android:id="@+id/action_total_destination_to_tea_destination2"
+            android:id="@+id/action_cart_tp_initial"
             app:destination="@id/inicial_screen" />
     </fragment>
 

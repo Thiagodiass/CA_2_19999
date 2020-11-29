@@ -74,7 +74,7 @@ class TotalFragment : Fragment() {
     private fun playAgain(){
         //text test fof the navigation
         //Toast.makeText(activity, "Back to the main screen", Toast.LENGTH_SHORT).show()
-        val action = TotalFragmentDirections.actionTotalDestinationToTeaDestination2()
+        val action = TotalFragmentDirections.actionCartTpInitial()
         NavHostFragment.findNavController(this).navigate(action)
     }
 }

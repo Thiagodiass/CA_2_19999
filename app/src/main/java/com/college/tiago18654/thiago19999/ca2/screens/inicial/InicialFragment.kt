@@ -5,19 +5,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AlphaAnimation
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.college.tiago18654.thiago19999.ca2.R
 import com.college.tiago18654.thiago19999.ca2.databinding.InicialFragmentBinding
-import com.college.tiago18654.thiago19999.ca2.screens.shop.ShopCartModel
+import com.college.tiago18654.thiago19999.ca2.screens.menu.MenuCartModel
 
 
 class InicialFragment : Fragment() {
 
     private lateinit var binding: InicialFragmentBinding;
-    private lateinit var cartModel: ShopCartModel;
+    private lateinit var cartModel: MenuCartModel;
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
