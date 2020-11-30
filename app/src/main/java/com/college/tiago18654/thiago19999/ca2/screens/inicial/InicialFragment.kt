@@ -30,8 +30,8 @@ class InicialFragment : Fragment() {
         Log.i("InicialFragment", "Inicial page.")
 
         //Pay cart button listener
-        binding.deliveryButton.setOnClickListener { menuCall("collect") }
-        binding.collectButton.setOnClickListener { menuCall("delivery") }
+        binding.deliveryButton.setOnClickListener { menuCall(1) }
+        binding.collectButton.setOnClickListener { menuCall(0) }
 
         return binding.root
 
@@ -41,12 +41,12 @@ class InicialFragment : Fragment() {
      * @author Tiago Rufino
      * Call the menu screen
      */
-    private fun menuCall(type: String) {
+    private fun menuCall(type : Int) {
         // text test for navigation
         //Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
         Log.i("InicialFragment", "menucall")
         val action = InicialFragmentDirections.actionInicialToTea();
-
+        action.type = type
         NavHostFragment.findNavController(this).navigate(action)
     }
 }

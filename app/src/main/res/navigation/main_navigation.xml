@@ -33,9 +33,22 @@
         android:name="com.college.tiago18654.thiago19999.ca2.screens.menu.MenuFragment"
         android:label="menu_fragment"
         tools:layout="@layout/menu_fragment">
+        <argument
+            android:name="type"
+            android:defaultValue="1"
+            app:argType="integer" />
         <action
             android:id="@+id/action_menu_to_cart"
             app:destination="@id/total_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+        <action
+            android:id="@+id/action_menu_to_inicial"
+            app:destination="@id/inicial_screen"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:launchSingleTop="true"

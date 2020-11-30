@@ -18,7 +18,6 @@ package com.college.tiago18654.thiago19999.ca2.screens.menu
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,11 +39,19 @@ class MenuFragment : Fragment() {
     private lateinit var binding: MenuFragmentBinding
     private lateinit var cartModel: MenuCartModel
     private lateinit var listView: ListView
+    private lateinit var menuModelFactory: MenuViewModelFactory
+    private val total: Float = 6.50F
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.menu_fragment, container,false)
+        menuModelFactory = MenuViewModelFactory(MenuFragmentArgs.fromBundle(requireArguments()).type)
+        cartModel = ViewModelProvider(this, menuModelFactory).get(MenuCartModel::class.java)
+
+        changeTitle()
+
+        binding.checkoutButton.setOnClickListener { goCheckOut() }
 
         val menuArrays = resources.getStringArray(R.array.Foods)
         val arrayAdapter = context?.let {
@@ -57,8 +64,8 @@ class MenuFragment : Fragment() {
             override fun onItemClick(parent: AdapterView<*>, view: View,
                                      position: Int, id: Long) {
                 // value of item that is clicked
-                val itemValue = listView.getItemAtPosition(position) as String
-                callMenuPopUp(true)
+                //val itemValue: Int = listView.getItemAtPosition(position) as Int
+                callMenuPopUp(view)
                 // Toast.makeText(context,"Position :$position\nItem Value : $itemValue", Toast.LENGTH_LONG).show()
             }
         }
@@ -70,10 +77,10 @@ class MenuFragment : Fragment() {
      * Call the popup window
      *
      */
-    @SuppressLint("ResourceType")
-    fun callMenuPopUp(open: Boolean){
-//        val popup = PopupMenu(context, binding.correctButton)
-//        popup.inflate(R.layout.sub_menu)
+    @SuppressLint("ResourceType", "InflateParams")
+    fun callMenuPopUp(view: View){
+//        val popup = PopupMenu(context, view)
+//        popup.inflate(R.menu.test)
 //        popup.setOnMenuItemClickListener {
 //            //Toast.makeText(context, "Item: " + it.title, Toast.LENGTH_SHORT).show()
 //            true
@@ -89,12 +96,36 @@ class MenuFragment : Fragment() {
         buttonAdd.setOnClickListener {
             window.dismiss()
             // text test for navigation
-            Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
+            // Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
             window.dismiss()
-            val action = MenuFragmentDirections.actionMenuToCart()
-            NavHostFragment.findNavController(this).navigate(action)
+            //val action = MenuFragmentDirections.actionMenuToCart()
+            //NavHostFragment.findNavController(this).navigate(action)
         }
 
+        cartModel.soma(cartModel.total, total)
+    }
+
+    fun goCheckOut(){
+        val action = MenuFragmentDirections.actionMenuToCart()
+        action.fee = cartModel.fee.toFloat()
+        action.total = cartModel.total
+        NavHostFragment.findNavController(this).navigate(action)
+    }
+
+    fun changeTitle(){
+        if (cartModel.type == 0){
+            binding.deliveryFromText.text = getString(R.string.collection_from)
+            binding.motoImage.setImageResource(R.drawable.bag)
+        } else if (cartModel.type == 1){
+            binding.deliveryFromText.text = getString(R.string.delivery_from)
+            binding.motoImage.setImageResource(R.drawable.moto)
+        } else {
+            // disable all itens
+            // change the title
+            // change the icon
+            // mudar botão para voltar (goCheckOut())
+            // mudar texto do botão
+        }
     }
 }
 
