@@ -37,7 +37,8 @@
     <string name="start_your_order">Start your order here:</string>
     <string name="todo">TODO</string>
     <string name="delivery_from">Delivery from €2.00</string>
-    <string name="collection_from">Collection from the main shop</string>
+    <string name="collection_from">Collect Store</string>
+    <string name="menu">Menu</string>
 
 
 
@@ -56,11 +57,11 @@
     <string name="select_option_text">Select Option</string>
     <string name="select_drink_text">Select Drink (0.33L)</string>
     <string name="prawns_check_box">Prawn Crackers (+ €1.00)</string>
-    <string name="cocacola_checkbox">Coca-Cola___________€0.00</string>
-    <string name="dietcocacola_checkbox">Diet Coca-Cola_______€0.00</string>
-    <string name="sprite_checkbox">Sprite_______________€0.00</string>
-    <string name="sevenup_checkbox">7-UP________________€0.00</string>
-    <string name="cluborange_checkbox">Club Orange_________€0.00</string>
+    <string name="cocacola_checkbox">Coca-Cola___________€1.50</string>
+    <string name="dietcocacola_checkbox">Diet Coca-Cola_______€1.50</string>
+    <string name="sprite_checkbox">Sprite_______________€1.50</string>
+    <string name="sevenup_checkbox">7-UP________________€1.50</string>
+    <string name="cluborange_checkbox">Club Orange_________€1.50</string>
     <string name="nodrink_checkbox">No Drink</string>
     <string name="add_to_tbe_basket_button">Add to the basket</string>
 

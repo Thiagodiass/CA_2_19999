@@ -26,7 +26,7 @@
 
     <!-- Button Styles -->
     <style name="DeliveryCollectionButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="colorAccent">@color/black_text_color</item>
+        <item name="colorAccent">@color/white_text_color</item>
     </style>
 
 </resources>

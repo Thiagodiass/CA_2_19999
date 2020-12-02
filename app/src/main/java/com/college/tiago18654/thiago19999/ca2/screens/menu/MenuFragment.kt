@@ -28,6 +28,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.college.tiago18654.thiago19999.ca2.R
 import com.college.tiago18654.thiago19999.ca2.databinding.MenuFragmentBinding
+import kotlinx.android.synthetic.main.inicial_fragment.*
 
 
 /**
@@ -120,6 +121,8 @@ class MenuFragment : Fragment() {
             binding.deliveryFromText.text = getString(R.string.delivery_from)
             binding.motoImage.setImageResource(R.drawable.moto)
         } else {
+            binding.deliveryFromText.text = getString(R.string.menu)
+            binding.motoImage.visibility = View.GONE
             // disable all itens
             // change the title
             // change the icon

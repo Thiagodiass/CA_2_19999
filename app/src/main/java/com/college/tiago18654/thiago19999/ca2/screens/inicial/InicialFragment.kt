@@ -32,6 +32,7 @@ class InicialFragment : Fragment() {
         //Pay cart button listener
         binding.deliveryButton.setOnClickListener { menuCall(1) }
         binding.collectButton.setOnClickListener { menuCall(0) }
+        binding.menuButton.setOnClickListener { menuCall(2) }
 
         return binding.root
 
