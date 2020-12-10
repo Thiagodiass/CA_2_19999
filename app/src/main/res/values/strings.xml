@@ -22,7 +22,7 @@
     <string name="the_item_is">The item is…</string>
 
 
-    <string name="teas">"\Total of teas:                   €"</string>
+    <string name="teas">"\Total price:                   €"</string>
     <!--string name="delivery">"\Delivery fees:                   €" </string-->
     <string name="total">"\TOTAL:                  €"</string>
 

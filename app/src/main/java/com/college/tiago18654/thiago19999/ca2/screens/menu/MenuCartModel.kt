@@ -23,6 +23,6 @@ class MenuCartModel(type: Int) : ViewModel(){
      * Criar uma função q some os soft drinks
      */
     fun soma(a1: Float, b1: Float){
-
+        total = a1 + b1;
     }
 }

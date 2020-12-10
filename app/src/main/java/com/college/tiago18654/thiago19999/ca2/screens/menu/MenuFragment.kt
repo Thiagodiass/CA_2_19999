@@ -28,7 +28,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.college.tiago18654.thiago19999.ca2.R
 import com.college.tiago18654.thiago19999.ca2.databinding.MenuFragmentBinding
+import com.college.tiago18654.thiago19999.ca2.screens.inicial.InicialFragmentDirections
+import com.college.tiago18654.thiago19999.ca2.screens.total.TotalFragmentDirections
 import kotlinx.android.synthetic.main.inicial_fragment.*
+import kotlinx.android.synthetic.main.sub_menu.*
+import kotlinx.android.synthetic.main.sub_menu.view.*
+import kotlinx.android.synthetic.main.total_fragment.*
 
 
 /**
@@ -41,6 +46,7 @@ class MenuFragment : Fragment() {
     private lateinit var cartModel: MenuCartModel
     private lateinit var listView: ListView
     private lateinit var menuModelFactory: MenuViewModelFactory
+
     private val total: Float = 6.50F
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -61,11 +67,13 @@ class MenuFragment : Fragment() {
         listView = binding.listaId
         listView.adapter = arrayAdapter
 
+
         listView.onItemClickListener = object : AdapterView.OnItemClickListener {
             override fun onItemClick(parent: AdapterView<*>, view: View,
                                      position: Int, id: Long) {
                 // value of item that is clicked
                 //val itemValue: Int = listView.getItemAtPosition(position) as Int
+
                 callMenuPopUp(view)
                 // Toast.makeText(context,"Position :$position\nItem Value : $itemValue", Toast.LENGTH_LONG).show()
             }
@@ -93,9 +101,34 @@ class MenuFragment : Fragment() {
 
         window.contentView = view
         window.showAsDropDown(binding.deliveryFromText)
+//        if(R.id.prawns_check_box.checked)
+//        {
+//            cartModel.total = cartModel.total+1.00F;
+//        }
+//        else if(cocacola_checkbox.equals(true))
+//        {
+//            cartModel.total = cartModel.total+1.50F;
+//        }
+//        else if(sprite_checkbox.equals(true))
+//        {
+//            cartModel.total = cartModel.total+1.50F;
+//        }
+//        else if(dietcocacola_checkbox.equals(true))
+//        {
+//            cartModel.total = cartModel.total+1.50F;
+//        }
+//        else if(cluborange_checkbox.equals(true))
+//        {
+//            cartModel.total = cartModel.total+1.50F;
+//        }
+//        else if(sevenup_checkbox.equals(true))
+//        {
+//            cartModel.total = cartModel.total+1.50F;
+//        }
         val buttonAdd = view.findViewById<Button>(R.id.add_to_tbe_basket_button_id)
         buttonAdd.setOnClickListener {
             window.dismiss()
+
             // text test for navigation
             // Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
             window.dismiss()
@@ -107,9 +140,22 @@ class MenuFragment : Fragment() {
     }
 
     fun goCheckOut(){
-        val action = MenuFragmentDirections.actionMenuToCart()
-        action.fee = cartModel.fee.toFloat()
-        action.total = cartModel.total
+        if( binding.checkoutButton.text.equals("Go Back"))
+        {
+            val action = MenuFragmentDirections.actionMenuToInicial()
+            NavHostFragment.findNavController(this).navigate(action)
+        }
+        else
+        {
+            val action = MenuFragmentDirections.actionMenuToCart()
+            action.fee = cartModel.fee.toFloat()
+            action.total = cartModel.total
+            NavHostFragment.findNavController(this).navigate(action)
+        }
+    }
+
+    fun goBack() {
+        val action = MenuFragmentDirections.actionMenuToInicial()
         NavHostFragment.findNavController(this).navigate(action)
     }
 
@@ -117,12 +163,17 @@ class MenuFragment : Fragment() {
         if (cartModel.type == 0){
             binding.deliveryFromText.text = getString(R.string.collection_from)
             binding.motoImage.setImageResource(R.drawable.bag)
+            cartModel.fee=0
         } else if (cartModel.type == 1){
             binding.deliveryFromText.text = getString(R.string.delivery_from)
             binding.motoImage.setImageResource(R.drawable.moto)
         } else {
             binding.deliveryFromText.text = getString(R.string.menu)
             binding.motoImage.visibility = View.GONE
+            binding.checkoutButton.text = "Go Back"
+
+
+
             // disable all itens
             // change the title
             // change the icon
