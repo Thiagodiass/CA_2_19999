@@ -16,25 +16,19 @@
 
 package com.college.tiago18654.thiago19999.ca2.screens.menu
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.college.tiago18654.thiago19999.ca2.R
 import com.college.tiago18654.thiago19999.ca2.databinding.MenuFragmentBinding
-import com.college.tiago18654.thiago19999.ca2.screens.inicial.InicialFragmentDirections
-import com.college.tiago18654.thiago19999.ca2.screens.total.TotalFragmentDirections
-import kotlinx.android.synthetic.main.inicial_fragment.*
-import kotlinx.android.synthetic.main.sub_menu.*
-import kotlinx.android.synthetic.main.sub_menu.view.*
-import kotlinx.android.synthetic.main.total_fragment.*
 
 
 /**
@@ -47,8 +41,6 @@ class MenuFragment : Fragment() {
     private lateinit var cartModel: MenuCartModel
     private lateinit var listView: ListView
     private lateinit var menuModelFactory: MenuViewModelFactory
-
-    private val total: Float = 6.50F
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
@@ -113,12 +105,6 @@ class MenuFragment : Fragment() {
             action.total = cartModel.total
             NavHostFragment.findNavController(this).navigate(action)
         }
-    }
-
-
-    fun goBack() {
-        val action = MenuFragmentDirections.actionMenuToInicial()
-        NavHostFragment.findNavController(this).navigate(action)
     }
 
     /**
