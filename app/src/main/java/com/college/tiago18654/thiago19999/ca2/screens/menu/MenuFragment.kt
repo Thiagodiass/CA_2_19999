@@ -92,6 +92,7 @@ class MenuFragment : Fragment() {
         val action = MenuFragmentDirections.actionMenuToSub()
         action.tittleSubItem = cartModel.tittleSubItem
         action.itemSubMenu = cartModel.itemSubMenu
+        action.total = cartModel.total
         NavHostFragment.findNavController(this).navigate(action)
     }
 
