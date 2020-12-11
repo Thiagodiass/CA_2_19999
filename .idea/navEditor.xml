@@ -38,10 +38,29 @@
                             <option name="y" value="72" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_menu_to_cart">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_menu_to_inicial">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_menu_to_sub">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="sub_menu_destination">
+                  <entry key="sub_menu_layout">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -52,7 +71,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_sub_menu_to_cart">
+                            <entry key="action_sub_to_menu">
                               <value>
                                 <LayoutPositions />
                               </value>

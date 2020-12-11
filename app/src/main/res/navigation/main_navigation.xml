@@ -29,6 +29,27 @@
         app:destination="@id/menu_destination" />
     </fragment>
     <fragment
+        android:id="@+id/sub_menu_layout"
+        android:name="com.college.tiago18654.thiago19999.ca2.screens.menu.SubMenuFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/sub_menu">
+        <argument
+            android:name="total"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="tittleSubItem"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="itemSubMenu"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sub_to_menu"
+            app:destination="@id/menu_destination" />
+    </fragment>
+    <fragment
         android:id="@+id/menu_destination"
         android:name="com.college.tiago18654.thiago19999.ca2.screens.menu.MenuFragment"
         android:label="menu_fragment"
@@ -37,9 +58,30 @@
             android:name="type"
             android:defaultValue="1"
             app:argType="integer" />
+        <argument
+            android:name="total"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="tittleSubItem"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="itemSubMenu"
+            android:defaultValue=""
+            app:argType="string" />
         <action
             android:id="@+id/action_menu_to_cart"
             app:destination="@id/total_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+        <action
+            android:id="@+id/action_menu_to_sub"
+            app:destination="@id/sub_menu_layout"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:launchSingleTop="true"

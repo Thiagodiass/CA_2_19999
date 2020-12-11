@@ -3,12 +3,14 @@ package com.college.tiago18654.thiago19999.ca2.screens.menu
 import android.util.Log
 import androidx.lifecycle.ViewModel
 
-class MenuCartModel(type: Int) : ViewModel(){
+class MenuCartModel(type: Int, total: Float, tittleSubItem: String, itemSubMenu: String) : ViewModel(){
 
     // The current total
-    var total  = 0.0F;
-    var fee = 2;
-    var type = type;
+    var total  = total
+    var fee = 2
+    var type = type
+    var itemSubMenu = itemSubMenu
+    var tittleSubItem = tittleSubItem
 
     init {
         Log.i("MenuCartModel", "MenuCartModel created!")
