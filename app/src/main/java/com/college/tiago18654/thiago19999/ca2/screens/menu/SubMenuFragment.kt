@@ -1,6 +1,7 @@
 package com.college.tiago18654.thiago19999.ca2.screens.menu
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,7 @@ class SubMenuFragment: Fragment() {
         binding.nameFoodText.text = cartModel.tittleSubItem;
         binding.descritionText.text = cartModel.itemSubMenu;
 
+
         binding.addToTbeBasketButtonId.setOnClickListener { addToTheCard() }
         binding.backButton.setOnClickListener { backButton() }
 
@@ -46,6 +48,7 @@ class SubMenuFragment: Fragment() {
         addItem()
         val action = SubMenuFragmentDirections.actionSubToMenu()
         action.total = cartModel.total
+        action.type = cartModel.type
         NavHostFragment.findNavController(this).navigate(action)
     }
 
@@ -81,6 +84,7 @@ class SubMenuFragment: Fragment() {
     private fun backButton(){
         val action = SubMenuFragmentDirections.actionSubToMenu()
         action.total = cartModel.total
+        action.type = cartModel.type
         NavHostFragment.findNavController(this).navigate(action)
     }
 }

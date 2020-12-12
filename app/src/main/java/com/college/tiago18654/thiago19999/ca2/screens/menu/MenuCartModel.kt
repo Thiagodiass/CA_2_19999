@@ -7,7 +7,7 @@ class MenuCartModel(type: Int, total: Float, tittleSubItem: String, itemSubMenu:
 
     // The current total
     var total  = total
-    var fee = 2
+    var fee = 0
     var type = type
     var itemSubMenu = itemSubMenu
     var tittleSubItem = tittleSubItem

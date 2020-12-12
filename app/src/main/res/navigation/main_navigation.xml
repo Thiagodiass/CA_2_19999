@@ -45,6 +45,10 @@
             android:name="itemSubMenu"
             android:defaultValue=""
             app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue="1"
+            app:argType="integer" />
         <action
             android:id="@+id/action_sub_to_menu"
             app:destination="@id/menu_destination" />

@@ -64,13 +64,16 @@ class MenuFragment : Fragment() {
         listView = binding.listaId
         listView.adapter = arrayAdapter
 
-        listView.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>, view: View,
-                                     position: Int, id: Long) {
-                actionSubMenu(position)
+        if(binding.checkoutButton.text.equals(getString(R.string.goBack))) {}
+        else
+        {
+            listView.onItemClickListener = object : AdapterView.OnItemClickListener {
+                override fun onItemClick(parent: AdapterView<*>, view: View,
+                                         position: Int, id: Long) {
+                    actionSubMenu(position)
+                }
             }
         }
-
         return binding.root
     }
 
@@ -85,6 +88,7 @@ class MenuFragment : Fragment() {
         action.tittleSubItem = cartModel.tittleSubItem
         action.itemSubMenu = cartModel.itemSubMenu
         action.total = cartModel.total
+        action.type = cartModel.type
         NavHostFragment.findNavController(this).navigate(action)
     }
 
@@ -93,7 +97,7 @@ class MenuFragment : Fragment() {
      * Define if the meny is for buyer of just check
      */
     fun goCheckOut(){
-        if( binding.checkoutButton.text.equals("Go Back"))
+        if( binding.checkoutButton.text.equals(getString(R.string.goBack)))
         {
             val action = MenuFragmentDirections.actionMenuToInicial()
             NavHostFragment.findNavController(this).navigate(action)
@@ -114,14 +118,15 @@ class MenuFragment : Fragment() {
         if (cartModel.type == 0){
             binding.deliveryFromText.text = getString(R.string.collection_from)
             binding.motoImage.setImageResource(R.drawable.bag)
-            cartModel.fee=0
+
         } else if (cartModel.type == 1){
             binding.deliveryFromText.text = getString(R.string.delivery_from)
             binding.motoImage.setImageResource(R.drawable.moto)
+            cartModel.fee=2
         } else {
             binding.deliveryFromText.text = getString(R.string.menu)
             binding.motoImage.visibility = View.GONE
-            binding.checkoutButton.text = "Go Back"
+            binding.checkoutButton.text = getString(R.string.goBack)
         }
     }
 }

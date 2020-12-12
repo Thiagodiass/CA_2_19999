@@ -39,23 +39,23 @@
     <string name="delivery_from">Delivery from €2.00</string>
     <string name="collection_from">Collect Store</string>
     <string name="menu">Menu</string>
-
+    <string name="goBack">Go Back</string>
 
 
     ​<string-array name="Foods">
         ​<item name="food">Meal Deal 1 \n \n \n 3 in 1, spicy chicken wings &amp; a can of soft drink</item>
-        ​<item name="food">Meal Deal 3 (3 + 1 &amp; S Roll) \n \n \n  3 in 1, two spring rolls &amp; can of soft drink</item>
-        ​<item name="food">Meal Deal 4 (3+1 &amp; 4Balls) \n \n \n 3 in 1, four chicken balls &amp; a can of soft drink</item>
-        ​<item name="food">Meal Deal 5(chicken cy &amp; chips) \n \n \n Chicken, cury &amp; chips in one tray &amp; a can of soft drink</item>
-        ​<item name="food">Meal Deal 6(3+1 &amp; 6 nuggets) \n \n \n 3 n 1, six chicken nuggets &amp; a can of soft drink</item>
+        ​<item name="food">Meal Deal 2 (3 + 1 &amp; S Roll) \n \n \n  3 in 1, two spring rolls &amp; can of soft drink</item>
+        ​<item name="food">Meal Deal 3 (3+1 &amp; 4Balls) \n \n \n 3 in 1, four chicken balls &amp; a can of soft drink</item>
+        ​<item name="food">Meal Deal 4 (chicken cy &amp; chips) \n \n \n Chicken, cury &amp; chips in one tray &amp; a can of soft drink</item>
+        ​<item name="food">Meal Deal 5 (3+1 &amp; 6 nuggets) \n \n \n 3 n 1, six chicken nuggets &amp; a can of soft drink</item>
     ​</string-array>​
 
     <string-array name="FoodNames">
         ​<item name="foodName">Meal Deal 1 </item>
+        ​<item name="foodName">Meal Deal 2 </item>
         ​<item name="foodName">Meal Deal 3 </item>
         ​<item name="foodName">Meal Deal 4 </item>
         ​<item name="foodName">Meal Deal 5 </item>
-        ​<item name="foodName">Meal Deal 6 </item>
     ​</string-array>
 
     <!-- Submenu window details -->
